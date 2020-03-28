@@ -1,5 +1,5 @@
 var webdriverio = require("webdriverio");
-var options = { desiredCapabilities: { browserName: "chrome" } };
+var options = { desiredCapabilities: { browserName: "Chrome" } };
 var browser = webdriverio.remote(options);
 var readline = require("readline");
 function readSyncByRl(tips) {
@@ -25,10 +25,8 @@ var init = function(url) {
             .then(() => resolve());
     });
 };
-
 init("http://localhost:8000/akg-detail.html?order_type=502&organization_id=linmon")
 .then(function() {
-   
 })
 .then(function() {
     //回车键退出
