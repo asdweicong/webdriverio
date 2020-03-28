@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>simulate click</title>
+</head>
+<body>
+  <input type="button" value="clickMe" id="demo_click">
+  <script>
+      
+      const btn = document.getElementById('demo_click');
+      btn.onclick = function () { //
+        alert('click complete!');
+      };
+      simulateClick();
+    // 2. 模拟 浏览器的鼠标点击事件
+    // 2.1 可以触发 onclick 事件（先触发）
+    // 2.2 可以触发 addEventListener 事件（后触发）
+    // 2.3 jQuery 的事件绑定底层就是 addEventListener ,
+      function simulateClick() { // 模拟 浏览器的鼠标点击事件
+        const event = new MouseEvent('click', {
+          view: window,
+          bubbles: true,
+          cancelable: true
+        });
+        btn.dispatchEvent(event);      
+      }
+  </script>
+</body>
+</html>
