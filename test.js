@@ -45,8 +45,8 @@ setTimeout(function () {
     // simulateClick(lis_active)
     // document.getElementsByClassName("money-box")[0].focus();//注意需要手动添加
     // document.getElementsByClassName("money-box")[0].value = 100;
-    var bet = document.getElementsByClassName('bet');
-    simulateClick(bet[0])
-
-
+    setTimeout(function () {
+        var bet = document.getElementsByClassName('bet');
+        simulateClick(bet[0])
+    }, 1000)
 }, 1000)
