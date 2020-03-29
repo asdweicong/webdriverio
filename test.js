@@ -48,5 +48,5 @@ setTimeout(function () {
     setTimeout(function () {
         var bet = document.getElementsByClassName('bet');
         simulateClick(bet[0])
-    }, 1000)
+    }, 5000)
 }, 1000)
